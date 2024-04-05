@@ -1,8 +1,10 @@
 import { CONFIG, cache } from '@/config';
 import axios from 'axios';
-import { coinsRouter } from '.';
+import { Router } from 'express';
 
-coinsRouter.get(
+export const search = Router();
+
+search.get(
   '/search',
   (req, res, next) => {
     const q = req.query.q;

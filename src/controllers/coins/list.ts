@@ -1,8 +1,10 @@
 import { CONFIG, cache } from '@/config';
 import axios from 'axios';
-import { coinsRouter } from '.';
+import { Router } from 'express';
 
-coinsRouter.get(
+export const list = Router();
+
+list.get(
   '/list',
   (req, res, next) => {
     // get offset from query params

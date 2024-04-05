@@ -1,8 +1,10 @@
 import { cache, CONFIG } from '@/config';
 import axios from 'axios';
-import { coinsRouter } from '.';
+import { Router } from 'express';
 
-coinsRouter.get(
+export const history = Router();
+
+history.get(
   '/:code/history',
   (req, res, next) => {
     const code = req.params.code;
