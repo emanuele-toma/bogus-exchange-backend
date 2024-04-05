@@ -1,0 +1,15 @@
+services:
+  backend:
+    container_name: backend
+    image: node:20-alpine
+    command: ["yarn", "dev"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    working_dir: /app
+  cache:
+    container_name: cache
+    image: redis:alpine
+    ports:
+      - "6379:6379"
