@@ -1,6 +1,6 @@
+import { coinsRouter } from '@/controllers';
 import 'dotenv/config';
 import express, { Router } from 'express';
-import { coinsRouter } from './controllers';
 
 const app = express();
 
